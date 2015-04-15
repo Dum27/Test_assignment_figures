@@ -15,7 +15,8 @@ public class Start
         Random random = new Random();
 
         // количество фигур
-        int count_figures = random.nextInt(100);
+        int count_figures = random.nextInt(300);
+        System.out.println("кол-во фигур: "+count_figures);
 
         int b=0;
         for(int i=0;i<count_figures;i++)
@@ -36,7 +37,6 @@ public class Start
         // отображаем фигуры
         for(int i =0; i<list_of_figures.size();i++)
         {
-            //  System.out.println(list_of_figures.get(i).getClass().getName());
             if(list_of_figures.get(i).getClass().getSimpleName().equals("Square"))
             {
                 Square sq = new Square();

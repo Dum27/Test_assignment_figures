@@ -13,7 +13,7 @@ public class Circle implements Figures
     {
         random=new Random();
         color = new Color(random.nextInt(256),random.nextInt(256),random.nextInt(256),random.nextInt(256));
-        radius=random.nextInt();
+        radius=random.nextInt(300);
     }
 
     public int getRadius() {

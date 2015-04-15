@@ -12,36 +12,18 @@ public class Triangle implements Figures
     private int c;
     private int gipotinuza;
 
-    // за основу возьмем равносторонний треугольник, в нем большая сторона и будет гипотинузой
+    // за основу возьмем равносторонний треугольник
     public Triangle()
     {
         random = new Random();
         color = new Color(random.nextInt(256),random.nextInt(256),random.nextInt(256),random.nextInt(256));
-        a = random.nextInt();
-        b = random.nextInt();
-        c = random.nextInt();
+        a = random.nextInt(300)+1;
+        b = random.nextInt(300)+1;
+
     }
 
-    public int getGipotinuza() {
-        if (a>b){
-            if (a>c){
-                gipotinuza = a;
-            }
-            else{
-                if(c>b){
-                    gipotinuza = c;
-                }
-                else{
-                    gipotinuza = b;
-                }
-            }
-        }
-        else{
-            if (b>c){
-                gipotinuza = b;
-            }
-        }
-        return gipotinuza;
+    public double getGipotinuza() {
+        return Math.sqrt(((a*a)+(b*b)));
     }
 
     @Override
@@ -51,10 +33,7 @@ public class Triangle implements Figures
 
     @Override
     public double get_area() {
-        double area = 0;
-        if(gipotinuza == a){area=(1/2)*b*c;}
-        if(gipotinuza == b){area = (1/2)*a*c;}
-        if(gipotinuza == c){area = (1/2)*a*b;}
-        return area;
+
+        return 0.5*a*b;
     }
 }

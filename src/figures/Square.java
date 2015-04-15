@@ -14,7 +14,7 @@ public class Square implements Figures
     {
         random=new Random();
         color = new Color(random.nextInt(256),random.nextInt(256),random.nextInt(256),random.nextInt(256));
-        side_size = random.nextInt();
+        side_size = random.nextInt(300);
     }
 
     public int getSide_size() {

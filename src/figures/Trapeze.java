@@ -17,9 +17,9 @@ public class Trapeze implements Figures
     {
     random = new Random();
     color = new Color(random.nextInt(256),random.nextInt(256),random.nextInt(256),random.nextInt(256));
-        a = random.nextInt(1000);
-        b = random.nextInt(500);
-        c = random.nextInt();
+        a = random.nextInt(1000)+1;
+        b = random.nextInt(500)+1;
+        c = random.nextInt(300)+1;
     }
 
     // длинна стороны
@@ -36,7 +36,6 @@ public class Trapeze implements Figures
     // (http://www-formula.ru/index.php?option=com_content&view=article&id=74&Itemid=68)
     @Override
     public double get_area() {
-        return ((a+b)/2)*Math.sin((Math.pow(c,2)-Math.pow((Math.pow((a-b),2)/(2*(a-b))),2)));
-        //double x = Math.sin(a5);
+        return ((a+b)/2)*Math.sqrt(((c*c)-(Math.pow((a-b),2))/4));
     }
 }
