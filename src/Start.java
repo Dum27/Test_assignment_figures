@@ -61,6 +61,9 @@ public class Start
                 Triangle triangle = new Triangle();
                 triangle = (Triangle)list_of_figures.get(i);
                 System.out.println("Figure: " + triangle.getClass().getSimpleName() + " , Area is: " + triangle.get_area() + " , Gipotinuza size: " + triangle.getGipotinuza() + " , Color: " + triangle.get_color());
+
+
+                System.out.print("WORK!!! ");
             }
         }
     }
